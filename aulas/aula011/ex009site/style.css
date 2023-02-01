@@ -1,0 +1,66 @@
+@charset "UTF-8";
+
+body {
+    background-image: linear-gradient(to right, yellow, green, blue);
+}
+
+div#tela {
+    width: 50vw;
+    height: 50vh;
+    background-color: yellow;
+    color: blue;
+    border-radius: 10px;
+    box-shadow: 1px 3px 3px green;
+
+    transform: translate(50%, 50%);
+}
+
+h1 {
+    font-size: 30pt;
+    text-align: center;
+    padding-top: 30px;
+}
+
+label {
+    font-size: 20pt;
+}
+
+input#itxtpais {
+    display: block;
+    text-align: center;
+    margin: auto;
+    height: 30px;
+    width: 99%;
+    margin-bottom: 10px;
+    background-color: lightgreen;
+    border-radius: 8px;
+    border-color: blue;
+    box-shadow: 1px 3px 3px rgba(0, 128, 0, 0.705);
+}
+
+input#itxtpais:focus-within {
+    background-color: white;
+}
+
+input[type=button] {
+    display: block;
+    margin: auto;
+    margin-bottom: 30px;
+    height: 30px;
+    width: 100%;
+    background-color: green;
+    color: white;
+    border-radius: 8px;
+    border-color: blue;
+    text-align: center;
+}
+
+div#res {
+    background-color: green;
+    color: rgb(16, 16, 160);
+    border-radius: 8px;
+    margin: auto;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 20pt;
+}

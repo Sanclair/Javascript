@@ -6,25 +6,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Somando Numeros</title>
     <style>
-        body {
-            font: normal 18pt arial;
 
+        body {
+            background-color: darkred;
+        }
+
+        div#calc {
+            height: 50vh;
+            width: 50vw;
+            text-align: center;
+            background-color: black;
+            color: white;
+            padding: 5px;
+            box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.705);
+
+            transform: translate(50%, 50%);
         }
 
         input {
             font: normal 16pt arial;
+            height: 30px;
             width: 100px;
+            margin: 10px;
+            text-align: center;
+        }
+
+        div#calc > input[type=number] {
+            background-color: darkred;
+            border-radius: 8px;
+            box-shadow: 1px 1px 5px rgba(139, 0, 0, 0.726);
+        }
+
+        div#calc > input[type=number]:focus-within {
+            background-color: white;
+        }
+
+        div#calc > input[type=button] {
+            background-color: darkred;
+            box-shadow: 1px 1px 5px darkred;
+            border-radius: 8px;
+        }
+
+        div#calc > input[type=button]:hover {
+            background-color: darkgray;
+        }
+
+        div#res {
+            height: 50px;
+            text-align: center;
+            background-color: darkred;
+            color: black;
+            margin: 20px;
+            padding: 20px;
+            font-size: 20pt;
+            font-weight: bolder;
+        }
+
+        h1 {
+            text-align: center;
         }
     </style>
 </head>
 <body>
-    <h1>Somando valores</h1>
-    <p>Digite um numero em cada espaço e tenha sua soma ao clicar no botão:  <strong>Somar</strong></p>
-    <input type="number" name="txtn1" id="txtn1"> +
-    <input type="number" name="txtn2" id="txtn2"> <br>
-    <input type="button" value="Somar" onclick="somar()">
-    <div id="res">
-        Resultado
+    <div id="calc">
+        <h1>Somando valores</h1>
+        <p>Digite um numero em cada espaço e tenha sua soma ao clicar no botão:  <strong>Somar</strong></p>
+        <input type="number" name="txtn1" id="txtn1" placeholder="Numero1"> +
+        <input type="number" name="txtn2" id="txtn2" placeholder="Numero2"> <br>
+        <input type="button" value="Somar" onclick="somar()">
+        <div id="res">
+            Resultado
+        </div>
     </div>
 
     <script>
@@ -36,6 +88,7 @@
             var n2 = Number(tn2.value)
             var s = n1 + n2
             res.innerHTML = `A soma entre ${n1} e ${n2} é: <strong>${s}</strong>`
+            res.style.background = 'darkgray'
         }
     </script>
 </body>
